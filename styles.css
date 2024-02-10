@@ -45,7 +45,7 @@ a       { text-decoration: none; color: var(--accent); }
 a:hover { text-decoration: underline; }
 
 main {
-    padding: 16px;
+    padding: 32px;
     max-width: 800px;
     margin: auto;
 }
@@ -70,7 +70,7 @@ code {
 
 p {
     color: #888888;
-    font-size: 18pt;
+    font-size: 15pt;
     padding: 32px 0px;
 }
 
@@ -104,6 +104,13 @@ operator                { color: var(--operator) }
 @media (min-width:768px) {
     code {
         font-size: 16pt;
+        line-height: 150%;
     }
+
+    p {
+        color: #888888;
+        font-size: 18pt;
+        padding: 32px 0px;
+    }    
 }
 
