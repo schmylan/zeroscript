@@ -43,12 +43,6 @@ main {
     margin: auto;
 }
 
-section {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
 code {
     font-size: 16pt;
     line-height: 150%;
