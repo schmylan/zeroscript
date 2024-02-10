@@ -1,0 +1,129 @@
+* { box-sizing: border-box; }
+
+body { 
+    color: #FFFFFF;
+    background-color: #1E1E1E;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    font-size: 14pt;
+    /* font-size: 3vw; */
+    text-align: center;
+    /* padding: 1px; */
+}
+
+.intro {
+    font-size: 42pt;
+    padding: 32px;
+    text-align: center;
+    color: #888888;
+}
+
+nav {
+    width: fit-content;
+}
+
+menu {
+    margin: 0;
+    list-style-type: none;
+    padding-left: 0;
+    width: fit-content;
+
+    & a {
+        font-size: 16pt;
+    }
+}
+
+a       { text-decoration: none; color: #FF7A00; }
+a:hover { text-decoration: underline; }
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* height: 200px; */
+    flex-grow: 1;
+    margin: auto;
+    overflow: auto;
+    /* overflow: scroll; */
+    /* height: 100vh; */
+    /* height: 100%; */
+    scroll-snap-type: y mandatory;
+}
+
+main {
+    max-width: 800px;
+}
+
+main > * {
+    margin: 16px;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+code {
+    font-size: 16pt;
+    /* font-size: 3vw; */
+    color: #FFFFFF;
+    line-height: 150%;
+    /* width: fit-content; */
+    /* margin: 0px; */
+    /* width: 100%; */
+    flex-grow: 1;
+    display: flex;
+    padding: 32px;
+}
+
+pre {
+    margin-top: auto;
+    margin-bottom: auto;
+    /* background-color: aqua; */
+}
+
+p {
+    color: #888888;
+    font-size: 18pt;
+    padding: 32px;
+    /* background-color: green; */
+}
+
+.accent { color: #FF7A00; }
+
+tag-open                { color: #6699CE; }
+tag-open:before         { color: #6F6F6F; content: "<"; }
+tag-open:after          { color: #6F6F6F; content: ">"; }
+tag-close               { color: #6699CE; }
+tag-close:before        { color: #6F6F6F; content: "</"; }
+tag-close:after         { color: #6F6F6F; content: ">"; }
+tag-self-close          { color: #6699CE; }
+tag-self-close:before   { color: #6F6F6F; content: "<"; }
+tag-self-close:after    { color: #6F6F6F; content: "/>"; }
+
+attr-name               { color: #9ECBE8; }
+attr-value              { color: #C5947C; }
+attr-unquoted           { color: #C5947C; }
+func                    { color: #DBDBAF; }
+
+comment                 { color: #74985D; }
+comment::before         { content: "<!-- "; }
+comment::after          { content: " -->"; }
+
+expression              { color: #FFFFFF; }
+expression::before      { color: #FF7A00; content: "{{"; }
+expression::after       { color: #FF7A00; content: "}}"; }
+
+operator                { color: hsl(246, 100%, 82%); }
