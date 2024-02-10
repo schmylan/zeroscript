@@ -1,32 +1,45 @@
+:root {
+    --background: #1E1E1E;
+    --accent: #FF7A00;
+    --tag: #6699CE;
+    --attr-name: #9ECBE8;
+    --attr-value: #C5947C;
+    --operator: #6F6F6F;
+    --comment: #74985D;
+    --func: #DBDBAF;
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body { 
-    color: #FFFFFF;
-    background-color: #1E1E1E;
+    color: white;
+    background-color: var(--background);
     font-family: 'Courier New', Courier, monospace;
 }
 
-tag-open                { color: #6699CE; }
-tag-open:before         { color: #6F6F6F; content: "<"; }
-tag-open:after          { color: #6F6F6F; content: ">"; }
-tag-close               { color: #6699CE; }
-tag-close:before        { color: #6F6F6F; content: "</"; }
-tag-close:after         { color: #6F6F6F; content: ">"; }
-tag-self-close          { color: #6699CE; }
-tag-self-close:before   { color: #6F6F6F; content: "<"; }
-tag-self-close:after    { color: #6F6F6F; content: "/>"; }
+.accent { color: var(--accent); }
 
-attr-name               { color: #9ECBE8; }
-attr-value              { color: #C5947C; }
-attr-unquoted           { color: #C5947C; }
-func                    { color: #DBDBAF; }
+tag-open                { color: var(--tag); }
+tag-open:before         { color: var(--operator); content: "<"; }
+tag-open:after          { color: var(--operator); content: ">"; }
+tag-close               { color: var(--tag); }
+tag-close:before        { color: var(--operator); content: "</"; }
+tag-close:after         { color: var(--operator); content: ">"; }
+tag-self-close          { color: var(--tag); }
+tag-self-close:before   { color: var(--operator); content: "<"; }
+tag-self-close:after    { color: var(--operator); content: "/>"; }
 
-comment                 { color: #74985D; }
+attr-name               { color: var(--attr-name); }
+attr-value              { color: var(--attr-value); }
+attr-unquoted           { color: var(--attr-value); }
+func                    { color: var(--func); }
+
+comment                 { color: var(--comment); }
 comment::before         { content: "<!-- "; }
 comment::after          { content: " -->"; }
 
-expression              { color: #FFFFFF; }
-expression::before      { color: #FF7A00; content: "{{"; }
-expression::after       { color: #FF7A00; content: "}}"; }
+expression              { color: white; }
+expression::before      { color: var(--accent); content: "{{"; }
+expression::after       { color: var(--accent); content: "}}"; }
 
-operator                { color: hsl(246, 100%, 82%); }
+operator                { color: var(--operator) }
