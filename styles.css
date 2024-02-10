@@ -17,6 +17,54 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+header {
+    font-size: 14pt;
+    padding: 16px;
+    text-align: center;
+}
+
+menu {
+    margin: 0;
+    list-style-type: none;
+    padding-left: 0;
+    width: fit-content;
+
+    & a {
+        font-size: 16pt;
+    }
+}
+
+a       { text-decoration: none; color: var(--accent); }
+a:hover { text-decoration: underline; }
+
+main {
+    padding: 16px;
+    max-width: 800px;
+    margin: auto;
+}
+
+section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+code {
+    font-size: 16pt;
+    line-height: 150%;
+}
+
+pre {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+p {
+    color: #888888;
+    font-size: 18pt;
+    padding: 32px;
+}
+
 .accent { color: var(--accent); }
 
 tag-open                { color: var(--tag); }
