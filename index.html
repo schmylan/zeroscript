@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ZeroScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <expression>ZeroScript</expression>
+      </h1>
+    </header>
+
+    <main>
+      <p class="intro">Build webapps with zero JavaScript</p>
+
+      <nav>
+        <menu>
+          <li><a href="#components">Components</a></li>
+          <li><a href="#attributes">Attributes</a></li>
+          <li><a href="#expressions">{{ expressions }}</a></li>
+          <li><a href="#if">&lt;if&gt;</a></li>
+          <li><a href="#else">&lt;else&gt;</a></li>
+          <li><a href="#elseif">&lt;else-if&gt;</a></li>
+          <li><a href="#for">&lt;for&gt;</a></li>
+          <li><a href="#slots">Slots</a></li>
+          <li><a href="#routes">Routes</a></li>
+          <li><a href="#state">&lt;state&gt;</a></li>
+          <li><a href="#style">&lt;style&gt;</a></li>
+          <li><a href="#script">&lt;script&gt;</a></li>
+          <li><a href="#sibling">Sibling Files</a></li>
+          <li><a href="#httpx">HTTP/X</a></li>
+        </menu>
+      </nav>
+
+      <!-- components -->
+      <section id="components">
+        <code>
+          <pre>
+<comment>MyButton.html</comment>
+
+<tag-open>button</tag-open>
+    Click me
+<tag-close>button</tag-close>
+</pre>
+        </code>
+        <p>Component are just vanilla HTML files. No imports necessary.</p>
+      </section>
+
+      <!-- attributes -->
+      <section id="attributes">
+        <code>
+          <pre>
+<comment>index.html</comment>
+
+<tag-open>html</tag-open>
+    <tag-open>body</tag-open>
+        <tag-self-close>MyButton <attr-name>message</attr-name>=<attr-value>"Click me"</attr-value> </tag-self-close>
+    <tag-close>body</tag-close>
+<tag-close>html</tag-close>
+</pre>
+        </code>
+        <p>Use attributes to pass read-only values into a component.</p>
+      </section>
+
+      <!-- attributes -->
+      <section>
+        <code>
+          <pre>
+<comment>index.html</comment>
+
+<tag-open>html</tag-open>
+    <tag-open>body</tag-open>
+        <tag-self-close>MyButton <attr-name>message</attr-name>=<attr-value>"Click me"</attr-value>
+                  <attr-name>max</attr-name>=<attr-unquoted>10</attr-unquoted>
+                  <attr-name>reset</attr-name>=<attr-unquoted>false</attr-unquoted> </tag-self-close>
+    <tag-close>body</tag-close>
+<tag-close>html</tag-close>
+</pre>
+        </code>
+        <p>
+          Use JSON-like syntax to strongly-type numbers and booleans (<a
+            href="https://www.w3.org/TR/2011/WD-html5-20110405/tokenization.html#attribute-value-unquoted-state"
+            >unquoted attributes</a
+          >).
+        </p>
+      </section>
+
+      <!-- expressions -->
+      <section id="expressions">
+        <code>
+          <pre>
+<comment>index.html</comment>
+
+<tag-open>html</tag-open>
+    <tag-open>body</tag-open>
+        <tag-self-close>MyButton <attr-name>message</attr-name>=<attr-value>"Click me"</attr-value>
+                  <attr-name>max</attr-name>=<attr-unquoted>10</attr-unquoted>
+                  <attr-name>reset</attr-name>=<attr-unquoted>false</attr-unquoted>
+                  <attr-name>expires</attr-name>=<expression>date</expression> </tag-self-close>
+    <tag-close>body</tag-close>
+<tag-close>html</tag-close>
+</pre>
+        </code>
+        <p>
+          Complex objects and arrays can be passed as attributes when escaped as
+          an expression <expression></expression>.
+        </p>
+      </section>
+
+      <!-- expressions -->
+      <section>
+        <code>
+          <pre>
+<comment>MyButton.html</comment>
+
+<tag-open>button</tag-open>
+    <tag-open>h1</tag-open><expression>message</expression><tag-close>h1</tag-close>
+    <tag-open>p</tag-open>Limit: <expression>max</expression><tag-close>p</tag-close>
+    <tag-open>div</tag-open>By: <expression>expires</expression><tag-close>div</tag-close>
+<tag-close>button</tag-close>
+</pre>
+        </code>
+        <p>
+          Access attribute values inside your component using
+          <expression>expressions</expression>.
+        </p>
+      </section>
+
+      <!-- expressions -->
+      <section>
+        <code>
+          <pre>
+<comment>MyButton.html</comment>
+
+<tag-open>button</tag-open>
+    <tag-open>h1</tag-open><expression>message <operator>??</operator> "Click me"</expression><tag-close>h1</tag-close>
+    <tag-open>p</tag-open>Limit: <expression>max <operator>*</operator> 2</expression><tag-close>p</tag-close>
+    <tag-open>div</tag-open>By: <expression>expires.Minutes.Ago</expression><tag-close>div</tag-close>
+<tag-close>button</tag-close>
+</pre>
+        </code>
+        <p>
+          Any expression is valid. Full statements (code often separated
+          semicolons) are not valid.
+        </p>
+      </section>
+
+      <!-- expressions -->
+      <section>
+        <code>
+          <pre>
+<comment>MyButton.html</comment>
+
+<tag-open>button</tag-open>
+    <tag-open>h1</tag-open><expression>message <operator>??</operator> "Click me"</expression><tag-close>h1</tag-close>
+    <tag-open>p</tag-open>Limit: <expression>max <operator>*</operator> 2</expression><tag-close>p</tag-close>
+    <tag-open>div</tag-open>By: <expression>expires.Minutes.Ago</expression><tag-close>div</tag-close>
+<tag-close>button</tag-close>
+</pre>
+        </code>
+        <p>
+          <expression>Expressions</expression> serve as portals into new
+          languages beyond just JavaScript. More on that in the &lt;script&gt;
+          and “siblings” sections below...
+        </p>
+      </section>
+
+      <!-- if -->
+      <section id="if">
+        <code>
+          <pre>
+<tag-open>button</tag-open>
+    <tag-open>if <expression>count < 10</expression></tag-open>
+        Clicks: <expression>count</expression>
+    <tag-close>if</tag-close>
+<tag-close>button</tag-close>
+</pre>
+        </code>
+        <p>
+          &lt;if&gt; is a control-flow tag that can optionally include its
+          contents.
+        </p>
+      </section>
+
+      <!-- if -->
+      <section>
+        <code>
+          <pre>
+<tag-open>button</tag-open>
+    <tag-open>if <expression>count < 10</expression></tag-open>
+        Clicks: <expression>count</expression>
+    <tag-close>if</tag-close>
+<tag-close>button</tag-close>
+</pre>
+        </code>
+        <p>
+          Control-flow tags include, exclude, or repeat their contents, but the
+          parent tag (&lt;if&gt;) itself is never a part of the DOM.
+        </p>
+      </section>
+
+      <!-- if -->
+      <section>
+        <code>
+          <pre>
+<tag-open>if <attr-name>first</attr-name>=<expression>user?.Name?.First</expression></tag-open>
+    <tag-open>h1</tag-open>Greetings <expression>first</expression>!<tag-close>h1</tag-close>
+<tag-close>if</tag-close>
+</pre>
+        </code>
+        <p>
+          The &lt;if&gt; tag can handle “if-let” control flow. The contents are
+          only included if the assigned value is non-null.
+        </p>
+      </section>
+
+      <!-- else -->
+      <section id="else">
+        <code>
+          <pre>
+<tag-open>if <attr-name>first</attr-name>=<expression>user?.Name?.First</expression></tag-open>
+    <tag-open>h1</tag-open>Greetings <expression>first</expression>!<tag-close>h1</tag-close>
+<tag-close>if</tag-close>
+<tag-open>else</tag-open>
+    <tag-open>h2</tag-open>Loading...<tag-close>h2</tag-close>
+<tag-close>else</tag-close>
+</pre>
+        </code>
+        <p>
+          Use &lt;else&gt; as a sibling tag to &lt;if&gt;. No enclosing parent
+          tag is necessary.
+        </p>
+      </section>
+
+      <!-- else-if -->
+      <section id="elseif">
+        <code>
+          <pre>
+<tag-open>if <attr-name>first</attr-name>=<expression>user?.Name?.First</expression></tag-open>
+    <tag-open>h1</tag-open>Greetings <expression>first</expression>!<tag-close>h1</tag-close>
+<tag-close>if</tag-close>
+<tag-open>else-if <expression>isLoading</expression></tag-open>
+    <tag-open>h2</tag-open>Loading...<tag-close>h2</tag-close>
+<tag-close>else-if</tag-close>
+<tag-open>else</tag-open>
+    <tag-open>button</tag-open>Sign in<tag-close>button</tag-close>
+<tag-close>else</tag-close>
+</pre>
+        </code>
+        <p>Optionally chain as many &lt;else-if&gt; tags as you like.</p>
+      </section>
+
+      <!-- for -->
+      <section id="for">
+        <code>
+          <pre>
+<tag-open>ul</tag-open>
+    <tag-open>for <attr-name>article</attr-name>=<expression>articles</expression></tag-open>
+        <tag-open>li</tag-open>
+            <tag-open>a <attr-name>href</attr-name>=<expression>article.Url</expression></tag-open>
+                <expression>article.Title</expression>
+            <tag-close>a</tag-close>
+        <tag-close>li</tag-close>
+    <tag-close>for</tag-close>
+<tag-close>ul</tag-close>
+</pre>
+        </code>
+        <p>Repeat contents with &lt;for&gt;.</p>
+      </section>
+
+      <!-- slots -->
+      <section id="slots">
+        <code>
+          <pre>
+<tag-open>html</tag-open>
+    <tag-open>body</tag-open>
+        <tag-open>MyButton</tag-open>
+            <tag-open>h1 <attr-name>slot</attr-name>=<attr-value>"message"</attr-value></tag-open>Click me<tag-close>h1</tag-close>
+        <tag-close>MyButton</tag-close>
+    <tag-close>body</tag-close>
+<tag-close>html</tag-close>
+</pre>
+        </code>
+        <p>
+          Use slots to pass HTML as inputs into your component. Similar to
+          attributes, components access them with an expression, e.g.
+          {{message}}.
+        </p>
+      </section>
+
+      <!-- routes -->
+      <section id="routes">
+        <code>
+          <pre>
+📦 my-project
+└─ 📂 blog
+    ├─ 📜 index.html       example.com/blog
+    └─ 📜 MyButton.html    (private)
+</pre
+          >
+        </code>
+        <p>
+          While every .html file is a component, only index.html files have
+          addressable routes.
+        </p>
+      </section>
+
+      <!-- routes -->
+      <section>
+        <code>
+          <pre>
+📦 my-project
+ └─ 📂 blog
+    ├─ 📜 index.html      example.com/blog
+    └─ 📜 MyButton.html   (private)
+    └─ 📂 <expression>slug</expression>
+       └─ 📜 index.html   example.com/blog/intro-to-zeroscript
+                          example.com/blog/advanced-zeroscript
+                          example.com/blog/the-good-parts
+</pre
+          >
+        </code>
+        <p>
+          Use the <expression> </expression> escape sequence in directory names
+          to define dynamic routing.
+        </p>
+      </section>
+
+      <!-- state -->
+      <section id="state">
+        <code>
+          <pre>
+<tag-self-close>state <attr-name>score</attr-name>=<attr-unquoted>0</attr-unquoted> </tag-self-close>
+<tag-self-close>MyButton <attr-name>count</attr-name>=<expression>score</expression> </tag-self-close>
+<tag-open>h1</tag-open>The score is <expression>score</expression><tag-close>h1</tag-close>
+</pre>
+        </code>
+        <p>
+          Use <tag-open>state</tag-open> for values that change.
+          <tag-open>state</tag-open> can be shared with and changed by other
+          components.
+        </p>
+      </section>
+
+      <!-- state -->
+      <section>
+        <code>
+          <pre>
+<tag-self-close>state <attr-name>name</attr-name>=<attr-value>"World"</attr-value> </tag-self-close>
+<tag-self-close>input <attr-name>value</attr-name>=<expression>name</expression> </tag-self-close>
+<tag-open>h1</tag-open>Hello <expression>name</expression>!<tag-close>h1</tag-close>
+</pre>
+        </code>
+        <p>
+          When <tag-open>state</tag-open> is assigned to an attribute, any
+          changes to the attribute's value also changes the
+          <tag-open>state</tag-open>.
+        </p>
+      </section>
+
+      <!-- style -->
+      <section id="style">
+        <code>
+          <pre>
+<comment>MyButton.html</comment>
+
+<tag-open>style</tag-open>
+    <func>button</func> { <attr-name>color:</attr-name> <attr-value>red</attr-value>; }
+<tag-close>style</tag-close>
+
+<tag-open>button</tag-open>
+    Click me
+<tag-close>button</tag-close>
+</pre>
+        </code>
+        <p>
+          <tag-open>style</tag-open> tags inside a component will be scoped to
+          only that component.
+        </p>
+      </section>
+
+      <!-- script -->
+      <section id="script">
+        <code>
+          <pre>
+<comment>MyButton.html</comment>
+
+<tag-open>script <attr-name>language</attr-name>=<span class="accent">"ANY-LANGUAGE"</span></tag-open>
+    <operator>func</operator> <func>handleClick</func>(e):
+        <func>print</func>(<attr-value>"Button was clicked."</attr-value>);
+<tag-close>script</tag-close>
+
+<tag-open>button <attr-name>onclick</attr-name>=<expression>handleClick</expression></tag-open>
+    Click me
+<tag-close>button</tag-close>
+</pre>
+        </code>
+        <p>
+          Use <tag-open>script</tag-open> to contain logic in any language. This
+          tag is never included in HTML output to the browser.
+        </p>
+      </section>
+
+      <!-- script -->
+      <section>
+        <code>
+          <pre>
+<comment>MyButton.html</comment>
+
+<tag-self-close>state <attr-name>count</attr-name>=<attr-unquoted>0</attr-unquoted> </tag-self-close>
+<tag-open>button <attr-name>onclick</attr-name>=<expression>e => count++</expression></tag-open>
+    Clicks: <expression>count</expression>
+<tag-close>button</tag-close>
+</pre>
+        </code>
+        <p>
+          If the guest language supports inline expressions, the
+          <tag-open>script</tag-open> tag can be optional.
+        </p>
+      </section>
+
+      <!-- sibling files -->
+      <section id="sibling">
+        <code>
+          <pre>
+📦 my-project
+├─ 📜 MyButton.html
+├─ 💄 MyButton.css
+└─ 🤖 MyButton.**
+</pre
+          >
+        </code>
+        <p>
+          Instead of embedding <tag-open>style</tag-open> and
+          <tag-open>script</tag-open> tags, optionally use separate files. No
+          imports necessary, just use the same file name.
+        </p>
+      </section>
+
+      <!-- http/x -->
+      <section id="httpx">
+        <code>
+          <pre>
+<func>HTTP:</func>
+browser ------ GET ----> server
+browser <----- HTML ---- server
+
+<span class="accent">HTTP/X:</span>
+browser ----- EVENT ---> server
+browser <--- CHANGES --- server
+</pre>
+        </code>
+        <p>
+          HTTP/X represents a collection of HTTP-based protocols designed for
+          state and logic that live on the server instead of the client.
+          <br /><br />
+
+          Instead of requesting HTML with a GET, HTTP/X forwards DOM events to
+          server-side event handlers which respond with a standardized set of
+          instructions optimized for mutating the DOM. <br /><br />
+
+          Read more at
+          <a href="https://httpx.org">httpx.org</a>.
+        </p>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
