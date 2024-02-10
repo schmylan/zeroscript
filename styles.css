@@ -45,13 +45,14 @@ main {
 
 code {
     font-size: 16pt;
+    font-size: 3vw;
     line-height: 150%;
 }
 
 p {
     color: #888888;
     font-size: 18pt;
-    padding: 32px;
+    padding: 32px 0px;
 }
 
 .accent { color: var(--accent); }
@@ -80,3 +81,10 @@ expression::before      { color: var(--accent); content: "{{"; }
 expression::after       { color: var(--accent); content: "}}"; }
 
 operator                { color: var(--operator) }
+
+@media (min-width:768px) {
+    code {
+        font-size: 16pt;
+    }
+}
+
