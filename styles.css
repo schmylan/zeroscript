@@ -43,12 +43,13 @@ header {
 menu {
     margin: 0;
     list-style-type: none;
-    padding-left: 0;
+    /* padding-left: 0; */
     width: fit-content;
+    font-size: 16pt;
+}
 
-    & a {
-        font-size: 16pt;
-    }
+li {
+    padding-left: 16px;
 }
 
 a       { text-decoration: none; color: var(--accent); }
@@ -88,7 +89,7 @@ em {
     font-style: normal;
 }
 
-.intro {
+#intro {
     display: flex;
     flex-direction: column;
     padding: 128px 0;
@@ -139,7 +140,7 @@ operator                { color: var(--operator) }
         font-size: 18pt;
     }    
 
-    .intro {
+    #intro {
         & h2 {
             font-size: 42pt;
         }
