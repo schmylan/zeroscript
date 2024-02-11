@@ -33,8 +33,8 @@
         </p>
         <code>
           <pre>
-    <tag-open>button <attr-name>onclick</attr-name>=<expression><i>expression goes here</i></expression></tag-open>
-        Clicks: <expression>count</expression>
+    <tag-open>button <attr-name>onclick</attr-name>=<expression><i>...expression...</i></expression></tag-open>
+      Clicks: <expression>count</expression>
     <tag-close>button</tag-close></pre>
         </code>
         <p>
@@ -73,12 +73,12 @@
 
       <!-- components -->
       <section class="code-sample" id="components">
-        <code>
+        <code class="font6vw">
           <pre>
 <comment>MyButton.html</comment>
 
 <tag-open>button</tag-open>
-    Click me
+  Click me
 <tag-close>button</tag-close>
 </pre>
         </code>
@@ -87,14 +87,16 @@
 
       <!-- attributes -->
       <section class="code-sample" id="attributes">
-        <code>
+        <code class="font5vw">
           <pre>
 <comment>index.html</comment>
 
 <tag-open>html</tag-open>
-    <tag-open>body</tag-open>
-        <tag-self-close>MyButton <attr-name>message</attr-name>=<attr-value>"Click me"</attr-value> </tag-self-close>
-    <tag-close>body</tag-close>
+  <tag-open>body</tag-open>
+    <tag-self-close>MyButton
+      <attr-name>message</attr-name>=<attr-value>"Click me"</attr-value>
+    </tag-self-close>
+  <tag-close>body</tag-close>
 <tag-close>html</tag-close>
 </pre>
         </code>
@@ -103,16 +105,18 @@
 
       <!-- attributes -->
       <section class="code-sample">
-        <code>
+        <code class="font5vw">
           <pre>
 <comment>index.html</comment>
 
 <tag-open>html</tag-open>
-    <tag-open>body</tag-open>
-        <tag-self-close>MyButton <attr-name>message</attr-name>=<attr-value>"Click me"</attr-value>
-                  <attr-name>max</attr-name>=<attr-unquoted>10</attr-unquoted>
-                  <attr-name>reset</attr-name>=<attr-unquoted>false</attr-unquoted> </tag-self-close>
-    <tag-close>body</tag-close>
+  <tag-open>body</tag-open>
+    <tag-self-close>MyButton
+      <attr-name>message</attr-name>=<attr-value>"Click me"</attr-value>
+      <attr-name>max</attr-name>=<attr-unquoted>10</attr-unquoted>
+      <attr-name>reset</attr-name>=<attr-unquoted>false</attr-unquoted>
+    </tag-self-close>
+  <tag-close>body</tag-close>
 <tag-close>html</tag-close>
 </pre>
         </code>
@@ -126,17 +130,19 @@
 
       <!-- expressions -->
       <section class="code-sample" id="expressions">
-        <code>
+        <code class="font5vw">
           <pre>
 <comment>index.html</comment>
 
 <tag-open>html</tag-open>
-    <tag-open>body</tag-open>
-        <tag-self-close>MyButton <attr-name>message</attr-name>=<attr-value>"Click me"</attr-value>
-                  <attr-name>max</attr-name>=<attr-unquoted>10</attr-unquoted>
-                  <attr-name>reset</attr-name>=<attr-unquoted>false</attr-unquoted>
-                  <attr-name>expires</attr-name>=<expression>date</expression> </tag-self-close>
-    <tag-close>body</tag-close>
+  <tag-open>body</tag-open>
+    <tag-self-close>MyButton 
+      <attr-name>message</attr-name>=<attr-value>"Click me"</attr-value>
+      <attr-name>max</attr-name>=<attr-unquoted>10</attr-unquoted>
+      <attr-name>reset</attr-name>=<attr-unquoted>false</attr-unquoted>
+      <attr-name>expires</attr-name>=<expression>date</expression> 
+    </tag-self-close>
+  <tag-close>body</tag-close>
 <tag-close>html</tag-close>
 </pre>
         </code>
@@ -148,14 +154,14 @@
 
       <!-- expressions -->
       <section class="code-sample">
-        <code>
+        <code class="font5vw">
           <pre>
 <comment>MyButton.html</comment>
 
 <tag-open>button</tag-open>
-    <tag-open>h1</tag-open><expression>message</expression><tag-close>h1</tag-close>
-    <tag-open>p</tag-open>Limit: <expression>max</expression><tag-close>p</tag-close>
-    <tag-open>div</tag-open>By: <expression>expires</expression><tag-close>div</tag-close>
+  <tag-open>h1</tag-open><expression>message</expression><tag-close>h1</tag-close>
+  <tag-open>p</tag-open>Limit: <expression>max</expression><tag-close>p</tag-close>
+  <tag-open>div</tag-open>By: <expression>expires</expression><tag-close>div</tag-close>
 <tag-close>button</tag-close>
 </pre>
         </code>
@@ -167,7 +173,7 @@
 
       <!-- expressions -->
       <section class="code-sample">
-        <code>
+        <code class="font3vw">
           <pre>
 <comment>MyButton.html</comment>
 
@@ -186,7 +192,7 @@
 
       <!-- expressions -->
       <section class="code-sample">
-        <code>
+        <code class="font3vw">
           <pre>
 <comment>MyButton.html</comment>
 
@@ -200,18 +206,18 @@
         <p>
           <expression>Expressions</expression> serve as portals into new
           languages beyond just JavaScript. More on that in the &lt;script&gt;
-          and “siblings” sections below...
+          and "siblings" sections below...
         </p>
       </section>
 
       <!-- if -->
       <section class="code-sample" id="if">
-        <code>
+        <code class="font6vw">
           <pre>
 <tag-open>button</tag-open>
-    <tag-open>if <expression>count < 10</expression></tag-open>
-        Clicks: <expression>count</expression>
-    <tag-close>if</tag-close>
+  <tag-open>if <expression>count < 10</expression></tag-open>
+    Clicks: <expression>count</expression>
+  <tag-close>if</tag-close>
 <tag-close>button</tag-close>
 </pre>
         </code>
@@ -223,12 +229,12 @@
 
       <!-- if -->
       <section class="code-sample">
-        <code>
+        <code class="font6vw">
           <pre>
 <tag-open>button</tag-open>
-    <tag-open>if <expression>count < 10</expression></tag-open>
-        Clicks: <expression>count</expression>
-    <tag-close>if</tag-close>
+  <tag-open>if <expression>count < 10</expression></tag-open>
+    Clicks: <expression>count</expression>
+  <tag-close>if</tag-close>
 <tag-close>button</tag-close>
 </pre>
         </code>
@@ -240,10 +246,10 @@
 
       <!-- if -->
       <section class="code-sample">
-        <code>
+        <code class="font4vw">
           <pre>
 <tag-open>if <attr-name>first</attr-name>=<expression>user?.Name?.First</expression></tag-open>
-    <tag-open>h1</tag-open>Greetings <expression>first</expression>!<tag-close>h1</tag-close>
+  <tag-open>h1</tag-open>Greetings <expression>first</expression>!<tag-close>h1</tag-close>
 <tag-close>if</tag-close>
 </pre>
         </code>
@@ -255,13 +261,13 @@
 
       <!-- else -->
       <section class="code-sample" id="else">
-        <code>
+        <code class="font4vw">
           <pre>
 <tag-open>if <attr-name>first</attr-name>=<expression>user?.Name?.First</expression></tag-open>
-    <tag-open>h1</tag-open>Greetings <expression>first</expression>!<tag-close>h1</tag-close>
+  <tag-open>h1</tag-open>Greetings <expression>first</expression>!<tag-close>h1</tag-close>
 <tag-close>if</tag-close>
 <tag-open>else</tag-open>
-    <tag-open>h2</tag-open>Loading...<tag-close>h2</tag-close>
+  <tag-open>h2</tag-open>Loading...<tag-close>h2</tag-close>
 <tag-close>else</tag-close>
 </pre>
         </code>
@@ -273,16 +279,16 @@
 
       <!-- else-if -->
       <section class="code-sample" id="elseif">
-        <code>
+        <code class="font4vw">
           <pre>
 <tag-open>if <attr-name>first</attr-name>=<expression>user?.Name?.First</expression></tag-open>
-    <tag-open>h1</tag-open>Greetings <expression>first</expression>!<tag-close>h1</tag-close>
+  <tag-open>h1</tag-open>Greetings <expression>first</expression>!<tag-close>h1</tag-close>
 <tag-close>if</tag-close>
 <tag-open>else-if <expression>isLoading</expression></tag-open>
-    <tag-open>h2</tag-open>Loading...<tag-close>h2</tag-close>
+  <tag-open>h2</tag-open>Loading...<tag-close>h2</tag-close>
 <tag-close>else-if</tag-close>
 <tag-open>else</tag-open>
-    <tag-open>button</tag-open>Sign in<tag-close>button</tag-close>
+  <tag-open>button</tag-open>Sign in<tag-close>button</tag-close>
 <tag-close>else</tag-close>
 </pre>
         </code>
@@ -291,16 +297,16 @@
 
       <!-- for -->
       <section class="code-sample" id="for">
-        <code>
+        <code class="font4vw">
           <pre>
 <tag-open>ul</tag-open>
-    <tag-open>for <attr-name>article</attr-name>=<expression>articles</expression></tag-open>
-        <tag-open>li</tag-open>
-            <tag-open>a <attr-name>href</attr-name>=<expression>article.Url</expression></tag-open>
-                <expression>article.Title</expression>
-            <tag-close>a</tag-close>
-        <tag-close>li</tag-close>
-    <tag-close>for</tag-close>
+  <tag-open>for <attr-name>article</attr-name>=<expression>articles</expression></tag-open>
+    <tag-open>li</tag-open>
+      <tag-open>a <attr-name>href</attr-name>=<expression>article.Url</expression></tag-open>
+        <expression>article.Title</expression>
+      <tag-close>a</tag-close>
+    <tag-close>li</tag-close>
+  <tag-close>for</tag-close>
 <tag-close>ul</tag-close>
 </pre>
         </code>
@@ -309,14 +315,16 @@
 
       <!-- slots -->
       <section class="code-sample" id="slots">
-        <code>
+        <code class="font5vw">
           <pre>
 <tag-open>html</tag-open>
-    <tag-open>body</tag-open>
-        <tag-open>MyButton</tag-open>
-            <tag-open>h1 <attr-name>slot</attr-name>=<attr-value>"message"</attr-value></tag-open>Click me<tag-close>h1</tag-close>
-        <tag-close>MyButton</tag-close>
-    <tag-close>body</tag-close>
+  <tag-open>body</tag-open>
+    <tag-open>MyButton</tag-open>
+      <tag-open>h1 <attr-name>slot</attr-name>=<attr-value>"message"</attr-value></tag-open>
+        Click <tag-open>b</tag-open>me<tag-close>b</tag-close>
+      <tag-close>h1</tag-close>
+    <tag-close>MyButton</tag-close>
+  <tag-close>body</tag-close>
 <tag-close>html</tag-close>
 </pre>
         </code>
@@ -329,11 +337,11 @@
 
       <!-- routes -->
       <section class="code-sample" id="routes">
-        <code>
+        <code class="font3vw">
           <pre>
 📦 my-project
 └─ 📂 blog
-    ├─ 📜 index.html     example.com/blog
+    ├─ 📜 index.html     <a>example.com/blog</a>
     └─ 📜 MyButton.html  (private)
 </pre
           >
@@ -346,16 +354,16 @@
 
       <!-- routes -->
       <section class="code-sample">
-        <code>
+        <code class="font3vw">
           <pre>
 📦 my-project
  └─ 📂 blog
-    ├─ 📜 index.html     example.com/blog
+    ├─ 📜 index.html     <a>ex.com/blog</a>
     └─ 📜 MyButton.html  (private)
     └─ 📂 <expression>slug</expression>
-       └─ 📜 index.html  example.com/blog/hi-there
-                         example.com/blog/one-more
-                         example.com/blog/last-one
+       └─ 📜 index.html  <a>ex.com/blog/hi-there</a>
+                         <a>ex.com/blog/one-more</a>
+                         <a>ex.com/blog/last-one</a>
 </pre
           >
         </code>
@@ -367,7 +375,7 @@
 
       <!-- state -->
       <section class="code-sample" id="state">
-        <code>
+        <code class="font4vw">
           <pre>
 <tag-self-close>state <attr-name>score</attr-name>=<attr-unquoted>0</attr-unquoted> </tag-self-close>
 <tag-self-close>MyButton <attr-name>count</attr-name>=<expression>score</expression> </tag-self-close>
@@ -383,7 +391,7 @@
 
       <!-- state -->
       <section class="code-sample">
-        <code>
+        <code class="font5vw">
           <pre>
 <tag-self-close>state <attr-name>name</attr-name>=<attr-value>"World"</attr-value> </tag-self-close>
 <tag-self-close>input <attr-name>value</attr-name>=<expression>name</expression> </tag-self-close>
@@ -399,16 +407,16 @@
 
       <!-- style -->
       <section class="code-sample" id="style">
-        <code>
+        <code class="font5vw">
           <pre>
 <comment>MyButton.html</comment>
 
 <tag-open>style</tag-open>
-    <func>button</func> { <attr-name>color:</attr-name> <attr-value>red</attr-value>; }
+  <func>button</func> { <attr-name>color:</attr-name> <attr-value>red</attr-value>; }
 <tag-close>style</tag-close>
 
 <tag-open>button</tag-open>
-    Click me
+  Click me
 <tag-close>button</tag-close>
 </pre>
         </code>
@@ -420,17 +428,17 @@
 
       <!-- script -->
       <section class="code-sample" id="script">
-        <code>
+        <code class="font4vw">
           <pre>
 <comment>MyButton.html</comment>
 
 <tag-open>script <attr-name>language</attr-name>=<span class="accent">"ANY-LANGUAGE"</span></tag-open>
-    <operator>func</operator> <func>handleClick</func>(e):
-        <func>print</func>(<attr-value>"Button was clicked."</attr-value>);
+  <operator>func</operator> <func>handleClick</func>(e):
+    <func>print</func>(<attr-value>"Button was clicked."</attr-value>);
 <tag-close>script</tag-close>
 
 <tag-open>button <attr-name>onclick</attr-name>=<expression>handleClick</expression></tag-open>
-    Click me
+  Click me
 <tag-close>button</tag-close>
 </pre>
         </code>
@@ -442,13 +450,13 @@
 
       <!-- script -->
       <section class="code-sample">
-        <code>
+        <code class="font4vw">
           <pre>
 <comment>MyButton.html</comment>
 
 <tag-self-close>state <attr-name>count</attr-name>=<attr-unquoted>0</attr-unquoted> </tag-self-close>
 <tag-open>button <attr-name>onclick</attr-name>=<expression>e => count++</expression></tag-open>
-    Clicks: <expression>count</expression>
+  Clicks: <expression>count</expression>
 <tag-close>button</tag-close>
 </pre>
         </code>
@@ -460,7 +468,7 @@
 
       <!-- sibling files -->
       <section class="code-sample" id="sibling">
-        <code>
+        <code class="font6vw">
           <pre>
 📦 my-project
 ├─ 📜 MyButton.html
@@ -478,7 +486,7 @@
 
       <!-- http/x -->
       <section class="code-sample" id="httpx">
-        <code>
+        <code class="font4vw">
           <pre>
 <func>HTTP:</func>
 browser ------- GET -------> server

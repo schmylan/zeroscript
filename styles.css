@@ -75,9 +75,13 @@ header, main > * {
 
 code {
     font-size: 16pt;
-    font-size: 3vw;
     line-height: 150%;
 }
+code.font2vw { font-size: 2vw; }
+code.font3vw { font-size: 3vw; }
+code.font4vw { font-size: 4vw; }
+code.font5vw { font-size: 5vw; }
+code.font6vw { font-size: 6vw; }
 
 p {
     color: #888888;
@@ -135,6 +139,11 @@ operator                { color: var(--operator) }
         font-size: 16pt;
         line-height: 150%;
     }
+    code.font2vw,
+    code.font3vw,
+    code.font4vw,
+    code.font5vw,
+    code.font6vw { font-size: 16pt; }
 
     p {
         font-size: 18pt;
