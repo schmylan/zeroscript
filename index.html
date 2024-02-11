@@ -2,8 +2,11 @@
 <html>
   <head>
     <title>ZeroScript</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta name="theme-color" content="#1E1E1E">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta name="theme-color" content="#1E1E1E" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -206,7 +209,8 @@
         </code>
         <p>
           <expression>Expressions</expression> serve as portals into new
-          languages beyond just JavaScript. More on that in the &lt;script&gt;
+          languages beyond just JavaScript. More on that in the
+          <tag-open>script</tag-open>
           and "siblings" sections below...
         </p>
       </section>
@@ -223,7 +227,7 @@
 </pre>
         </code>
         <p>
-          &lt;if&gt; is a control-flow tag that can optionally include its
+          <tag-open>if</tag-open> is a control-flow tag that can optionally include its
           contents.
         </p>
       </section>
@@ -241,7 +245,7 @@
         </code>
         <p>
           Control-flow tags include, exclude, or repeat their contents, but the
-          parent tag (&lt;if&gt;) itself is never a part of the DOM.
+          parent tag (<tag-open>if</tag-open>) itself is never a part of the DOM.
         </p>
       </section>
 
@@ -255,7 +259,7 @@
 </pre>
         </code>
         <p>
-          The &lt;if&gt; tag can handle “if-let” control flow. The contents are
+          The <tag-open>if</tag-open> tag can handle “if-let” control flow. The contents are
           only included if the assigned value is non-null.
         </p>
       </section>
@@ -273,7 +277,7 @@
 </pre>
         </code>
         <p>
-          Use &lt;else&gt; as a sibling tag to &lt;if&gt;. No enclosing parent
+          Use <tag-open>else</tag-open> as a sibling tag to <tag-open>if</tag-open>. No enclosing parent
           tag is necessary.
         </p>
       </section>
@@ -293,7 +297,7 @@
 <tag-close>else</tag-close>
 </pre>
         </code>
-        <p>Optionally chain as many &lt;else-if&gt; tags as you like.</p>
+        <p>Optionally chain as many <tag-open>else-if</tag-open> tags as you like.</p>
       </section>
 
       <!-- for -->
@@ -311,7 +315,7 @@
 <tag-close>ul</tag-close>
 </pre>
         </code>
-        <p>Repeat contents with &lt;for&gt;.</p>
+        <p>Repeat contents with <tag-open>for</tag-open>.</p>
       </section>
 
       <!-- slots -->
