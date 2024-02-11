@@ -11,35 +11,61 @@
         <expression>ZeroScript</expression>
       </h1>
       <span>
-        <a href="https://github.com/schmylan/zeroscript"><img src="github.svg" /></a>
+        <a href="https://github.com/schmylan/zeroscript"
+          ><img src="github.svg"
+        /></a>
         <a href="https://twitter.com/zeroscript_org"><img src="x.svg" /></a>
       </span>
     </header>
 
     <main>
-      <p class="intro">Build webapps with zero JavaScript</p>
+      <section class="intro">
+        <h2>Build webapps with <em>zero</em> JavaScript</h2>
+        <p>
+          ZeroScript is an HTML-like syntax designed for building rich web
+          applications using languages other than JavaScript.
+        </p>
+        <p>
+          This goal remains unrealistic until other languages can both generate
+          HTML <i>and</i> manipulate the DOM. The solution is to use an
+          HTML-first approach — instead of putting HTML inside your logic,
+          ZeroScript puts your logic inside your HTML.
+        </p>
+        <code>
+          <pre>
+    <tag-open>button <attr-name>onclick</attr-name>=<expression>e => count++</expression></tag-open>
+        Clicks: <expression>count</expression>
+    <tag-close>button</tag-close></pre>
+        </code>
+        <p>
+          This is NOT intended to be implemented by browsers or engines nor is
+          it a proposal for the HTML spec itself. Think of it like Markdown — a
+          small set of "preprocessor rules" for yielding predictable results
+          regardless of underlying language or platform.
+        </p>
 
-      <nav>
-        <menu>
-          <li><a href="#components">Components</a></li>
-          <li><a href="#attributes">Attributes</a></li>
-          <li><a href="#expressions">{{ expressions }}</a></li>
-          <li><a href="#if">&lt;if&gt;</a></li>
-          <li><a href="#else">&lt;else&gt;</a></li>
-          <li><a href="#elseif">&lt;else-if&gt;</a></li>
-          <li><a href="#for">&lt;for&gt;</a></li>
-          <li><a href="#slots">Slots</a></li>
-          <li><a href="#routes">Routes</a></li>
-          <li><a href="#state">&lt;state&gt;</a></li>
-          <li><a href="#style">&lt;style&gt;</a></li>
-          <li><a href="#script">&lt;script&gt;</a></li>
-          <li><a href="#sibling">Sibling Files</a></li>
-          <li><a href="#httpx">HTTP/X</a></li>
-        </menu>
-      </nav>
+        <nav>
+          <menu>
+            <li><a href="#components">Components</a></li>
+            <li><a href="#attributes">Attributes</a></li>
+            <li><a href="#expressions">{{ expressions }}</a></li>
+            <li><a href="#if">&lt;if&gt;</a></li>
+            <li><a href="#else">&lt;else&gt;</a></li>
+            <li><a href="#elseif">&lt;else-if&gt;</a></li>
+            <li><a href="#for">&lt;for&gt;</a></li>
+            <li><a href="#slots">Slots</a></li>
+            <li><a href="#routes">Routes</a></li>
+            <li><a href="#state">&lt;state&gt;</a></li>
+            <li><a href="#style">&lt;style&gt;</a></li>
+            <li><a href="#script">&lt;script&gt;</a></li>
+            <li><a href="#sibling">Sibling Files</a></li>
+            <li><a href="#httpx">HTTP/X</a></li>
+          </menu>
+        </nav>
+      </section>
 
       <!-- components -->
-      <section id="components">
+      <section class="code-sample" id="components">
         <code>
           <pre>
 <comment>MyButton.html</comment>
@@ -53,7 +79,7 @@
       </section>
 
       <!-- attributes -->
-      <section id="attributes">
+      <section class="code-sample" id="attributes">
         <code>
           <pre>
 <comment>index.html</comment>
@@ -69,7 +95,7 @@
       </section>
 
       <!-- attributes -->
-      <section>
+      <section class="code-sample">
         <code>
           <pre>
 <comment>index.html</comment>
@@ -92,7 +118,7 @@
       </section>
 
       <!-- expressions -->
-      <section id="expressions">
+      <section class="code-sample" id="expressions">
         <code>
           <pre>
 <comment>index.html</comment>
@@ -114,7 +140,7 @@
       </section>
 
       <!-- expressions -->
-      <section>
+      <section class="code-sample">
         <code>
           <pre>
 <comment>MyButton.html</comment>
@@ -133,7 +159,7 @@
       </section>
 
       <!-- expressions -->
-      <section>
+      <section class="code-sample">
         <code>
           <pre>
 <comment>MyButton.html</comment>
@@ -152,7 +178,7 @@
       </section>
 
       <!-- expressions -->
-      <section>
+      <section class="code-sample">
         <code>
           <pre>
 <comment>MyButton.html</comment>
@@ -172,7 +198,7 @@
       </section>
 
       <!-- if -->
-      <section id="if">
+      <section class="code-sample" id="if">
         <code>
           <pre>
 <tag-open>button</tag-open>
@@ -189,7 +215,7 @@
       </section>
 
       <!-- if -->
-      <section>
+      <section class="code-sample">
         <code>
           <pre>
 <tag-open>button</tag-open>
@@ -206,7 +232,7 @@
       </section>
 
       <!-- if -->
-      <section>
+      <section class="code-sample">
         <code>
           <pre>
 <tag-open>if <attr-name>first</attr-name>=<expression>user?.Name?.First</expression></tag-open>
@@ -221,7 +247,7 @@
       </section>
 
       <!-- else -->
-      <section id="else">
+      <section class="code-sample" id="else">
         <code>
           <pre>
 <tag-open>if <attr-name>first</attr-name>=<expression>user?.Name?.First</expression></tag-open>
@@ -239,7 +265,7 @@
       </section>
 
       <!-- else-if -->
-      <section id="elseif">
+      <section class="code-sample" id="elseif">
         <code>
           <pre>
 <tag-open>if <attr-name>first</attr-name>=<expression>user?.Name?.First</expression></tag-open>
@@ -257,7 +283,7 @@
       </section>
 
       <!-- for -->
-      <section id="for">
+      <section class="code-sample" id="for">
         <code>
           <pre>
 <tag-open>ul</tag-open>
@@ -275,7 +301,7 @@
       </section>
 
       <!-- slots -->
-      <section id="slots">
+      <section class="code-sample" id="slots">
         <code>
           <pre>
 <tag-open>html</tag-open>
@@ -295,7 +321,7 @@
       </section>
 
       <!-- routes -->
-      <section id="routes">
+      <section class="code-sample" id="routes">
         <code>
           <pre>
 📦 my-project
@@ -312,7 +338,7 @@
       </section>
 
       <!-- routes -->
-      <section>
+      <section class="code-sample">
         <code>
           <pre>
 📦 my-project
@@ -333,7 +359,7 @@
       </section>
 
       <!-- state -->
-      <section id="state">
+      <section class="code-sample" id="state">
         <code>
           <pre>
 <tag-self-close>state <attr-name>score</attr-name>=<attr-unquoted>0</attr-unquoted> </tag-self-close>
@@ -349,7 +375,7 @@
       </section>
 
       <!-- state -->
-      <section>
+      <section class="code-sample">
         <code>
           <pre>
 <tag-self-close>state <attr-name>name</attr-name>=<attr-value>"World"</attr-value> </tag-self-close>
@@ -365,7 +391,7 @@
       </section>
 
       <!-- style -->
-      <section id="style">
+      <section class="code-sample" id="style">
         <code>
           <pre>
 <comment>MyButton.html</comment>
@@ -386,7 +412,7 @@
       </section>
 
       <!-- script -->
-      <section id="script">
+      <section class="code-sample" id="script">
         <code>
           <pre>
 <comment>MyButton.html</comment>
@@ -408,7 +434,7 @@
       </section>
 
       <!-- script -->
-      <section>
+      <section class="code-sample">
         <code>
           <pre>
 <comment>MyButton.html</comment>
@@ -426,7 +452,7 @@
       </section>
 
       <!-- sibling files -->
-      <section id="sibling">
+      <section class="code-sample" id="sibling">
         <code>
           <pre>
 📦 my-project
@@ -444,7 +470,7 @@
       </section>
 
       <!-- http/x -->
-      <section id="httpx">
+      <section class="code-sample" id="httpx">
         <code>
           <pre>
 <func>HTTP:</func>
