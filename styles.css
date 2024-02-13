@@ -1,4 +1,6 @@
 :root {
+    --primary: #FFFFFF;
+    --secondary: #888888;
     --background: #1E1E1E;
     --accent: #FF7A00;
     --tag: #6699CE;
@@ -16,7 +18,7 @@ html {
 }
 
 body { 
-    color: white;
+    color: var(--primary);
     background-color: var(--background);
     font-family: 'Courier New', Courier, monospace;
 }
@@ -84,7 +86,7 @@ code.font5vw { font-size: 5vw; }
 code.font6vw { font-size: 6vw; }
 
 p {
-    color: #888888;
+    color: var(--secondary);
     font-size: 15pt;
 }
 
@@ -128,7 +130,7 @@ comment                 { color: var(--comment); }
 comment::before         { content: "<!-- "; }
 comment::after          { content: " -->"; }
 
-expression              { color: white; }
+expression              { color: var(--primary); }
 expression::before      { color: var(--accent); content: "{{"; }
 expression::after       { color: var(--accent); content: "}}"; }
 
