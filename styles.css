@@ -42,13 +42,7 @@ header {
     }
 }
 
-menu {
-    margin: 0;
-    list-style-type: none;
-    /* padding-left: 0; */
-    width: fit-content;
-    font-size: 16pt;
-}
+nav { display: none; }
 
 li {
     padding-left: 16px;
@@ -136,7 +130,42 @@ expression::after       { color: var(--accent); content: "}}"; }
 
 operator                { color: var(--operator) }
 
-@media (min-width:768px) {
+@media (min-width:900px) {
+    main { margin-right: 400px; }
+    nav {
+        width: 400px;
+        height: 100vh;
+        display: inline;
+        position: fixed;
+        top: 0;
+        right: 0;
+        overflow: scroll;
+        padding: 64px;
+        /* background-color: blue; */
+
+        & div {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* background-color: aquamarine; */
+        }
+
+        & menu {
+            line-height: 1.5;
+            list-style-type: none;
+            /* padding-left: 0; */
+            width: fit-content;
+            font-size: 14pt;
+            /* background-color: red; */
+        }
+
+        & a        { color: var(--secondary); }
+        & a:hover  { color: var(--accent); text-decoration: none; font-weight: bold; }
+        & a:current { color: var(--accent); }
+    }
+
     code {
         font-size: 16pt;
         line-height: 150%;
