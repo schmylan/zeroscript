@@ -26,16 +26,18 @@ body {
 
 header {
     background-color: var(--background);
-    padding: 8px;
     position: sticky;
     top: 0;
+    height: 64px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
 
     & h1 {
+        width: 100%;
         font-size: 18pt;
-        margin: auto 0;
+        /* padding-left: 16px; */
     }
 
     & img {
@@ -43,23 +45,29 @@ header {
     }
 }
 
-nav { display: none; }
+nav { 
+    display: none;
 
-li {
-    padding-left: 16px;
+    & li { 
+        padding-left: 16px;
+    }
 }
 
 a       { text-decoration: none; color: var(--accent); }
 a:hover { text-decoration: underline; }
 
 main {
-    padding: 32px;
+    padding: 0;
     max-width: 800px;
     margin: auto;
-}
 
-header, main > * {
-    scroll-snap-align: start;
+    > * {
+        scroll-snap-align: start;
+    }
+
+    > section {
+        padding: 0px 32px;
+    }
 }
 
 .code-sample {
@@ -93,7 +101,8 @@ em {
 #intro {
     display: flex;
     flex-direction: column;
-    padding: 128px 0;
+    padding-top: 64px;
+    padding-bottom: 64px;
     gap: 32px;
 
     & h2 {
@@ -210,3 +219,40 @@ operator                { color: var(--operator) }
     }
 }
 
+@media (max-width:900px) {
+    main {
+        & header {
+            /* background-color: var(--background);
+            background-color: transparent; */
+            /* position: sticky;
+            top: 0;
+            height: 75px; */
+            /* display: flex;
+            flex-direction: row;
+            justify-content: right;
+            align-items: center; */
+            & h1 {
+                /* background-color: var(--background);
+                width: fit-content; */
+            }
+        }
+    }
+
+    @supports (height: 100vh) {	
+        body{	
+            background: linear-gradient(to right top, var(--accent) 50%, var(--background) 50%);
+            background-size: 100% calc(100% - 100vh + 129px);
+            background-repeat: no-repeat;
+        }
+
+        body:before{
+            content:'';
+            position: fixed;
+            top: 65px;
+            bottom: 0;
+            width: 100%;
+            z-index: -1;
+            background: var(--background);
+        }
+    }
+}
