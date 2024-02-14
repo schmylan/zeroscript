@@ -45,6 +45,18 @@ header {
     }
 }
 
+h3 {
+    position: sticky;
+    top: 0px;
+    background-color: var(--background);
+    color: var(--primary);
+    font-size: 18pt;
+    height: 64px;
+    padding-left: 32px;
+    display: flex;
+    align-items: center;
+}
+
 nav { 
     display: none;
 
@@ -142,6 +154,7 @@ operator                { color: var(--operator) }
 
 @media (min-width:900px) {
     main { margin-right: 400px; }
+    h3 { display: none; }
     nav {
         width: 400px;
         height: 100vh;
