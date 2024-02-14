@@ -167,6 +167,28 @@ operator                { color: var(--operator) }
         & a:current { color: var(--accent); }
     }
 
+    nav a:hover, 
+    section.intro:hover ~ nav a[href='#intro'],
+    section.components:hover ~ nav a[href='#components'],
+    section.attributes:hover ~ nav a[href='#attributes'],
+    section.expressions:hover ~ nav a[href='#expressions'],
+    section.if:hover ~ nav a[href='#if'],
+    section.else:hover ~ nav a[href='#else'],
+    section.else-if:hover ~ nav a[href='#else-if'],
+    section.for:hover ~ nav a[href='#for'],
+    section.slots:hover ~ nav a[href='#slots'],
+    section.routes:hover ~ nav a[href='#routes'],
+    section.state:hover ~ nav a[href='#state'],
+    section.style:hover ~ nav a[href='#style'],
+    section.script:hover ~ nav a[href='#script'],
+    section.sibling:hover ~ nav a[href='#sibling'],
+    section.httpx:hover ~ nav a[href='#httpx'],
+    section.more:hover ~ nav a[href='#more'] {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: bold;
+    }
+
     code {
         font-size: 16pt;
         line-height: 150%;
