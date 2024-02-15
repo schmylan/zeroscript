@@ -60,7 +60,7 @@
 <tag-close>button</tag-close>
 </pre>
         </code>
-        <p>Component are just vanilla HTML files. No imports necessary.</p>
+        <p>Components are just vanilla HTML files. No imports necessary.</p>
       </section>
 
       <h3>Attributes</h3>
@@ -167,8 +167,8 @@
 </pre>
         </code>
         <p>
-          Any expression is valid. Full statements are not valid (code often
-          separated by semicolons).
+          Any expression is valid. Full statements are not valid (i.e. code
+          often separated by semicolons).
         </p>
       </section>
 
@@ -188,8 +188,7 @@
         <p>
           <expression>Expressions</expression> serve as portals into new
           languages beyond just JavaScript. More on that in the
-          <tag-open>script</tag-open>
-          and "siblings" sections below...
+          <tag-open>script</tag-open> section below...
         </p>
       </section>
 
@@ -402,7 +401,8 @@
         <p>
           When <tag-open>state</tag-open> is assigned to an attribute, any
           changes to the attribute's value also changes the
-          <tag-open>state</tag-open>.
+          <tag-open>state</tag-open>. Here, every keypress will update the
+          <tag-open>h1</tag-open> tag.
         </p>
       </section>
 
@@ -424,8 +424,8 @@
 </pre>
         </code>
         <p>
-          <tag-open>style</tag-open> tags inside a component will be scoped to
-          only that component.
+          <tag-open>style</tag-open> tags inside a component will have its CSS
+          scoped to only that component.
         </p>
       </section>
 
@@ -512,9 +512,9 @@ browser <--- DOM CHANGES --- server
           client.
           <br /><br />
 
-          Instead of requesting HTML with a GET, HTTP/X forwards DOM events to
-          server-side event handlers which respond with a standardized set of
-          instructions optimized for mutating the DOM. <br /><br />
+          Instead of requesting HTML with a GET, HTTP/X forwards browser events
+          to server-side event handlers which respond with standardized
+          instructions for manipulating the DOM. <br /><br />
 
           Read more at
           <a href="https://httpx.org">httpx.org</a>.
@@ -580,7 +580,7 @@ browser <--- DOM CHANGES --- server
           </tr>
           <tr>
             <td>Swift</td>
-            <td><a href="mailto:hi@zeroscrip.org">introduce yourself 👋</a></td>
+            <td><a href="mailto:hi@zeroscript.org">introduce yourself 👋</a></td>
           </tr>
           <tr>
             <td>Perl</td>
