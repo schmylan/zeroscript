@@ -218,7 +218,8 @@ operator                { color: var(--operator) }
     section.script:hover ~ nav a[href='#script'],
     section.sibling:hover ~ nav a[href='#sibling'],
     section.httpx:hover ~ nav a[href='#httpx'],
-    section.more:hover ~ nav a[href='#more'] {
+    section.more:hover ~ nav a[href='#more'],
+    section.get-started:hover ~ nav a[href='#get-started'] {
         color: var(--accent);
         text-decoration: none;
         font-weight: bold;
