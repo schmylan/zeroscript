@@ -203,6 +203,7 @@ operator                { color: var(--operator) }
 
     nav a:hover, 
     section.intro:hover ~ nav a[href='#intro'],
+    section.learn:hover ~ nav a[href='#learn'],
     section.components:hover ~ nav a[href='#components'],
     section.attributes:hover ~ nav a[href='#attributes'],
     section.expressions:hover ~ nav a[href='#expressions'],
