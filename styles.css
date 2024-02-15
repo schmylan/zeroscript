@@ -32,29 +32,45 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0px 16px;
 
     & h1 {
         width: 100%;
         font-size: 18pt;
-        /* padding-left: 16px; */
+        padding-left: 16px;
+        display: flex;
+        align-items: center;
     }
 
     & img {
         padding: 16px;
+        padding-right: 32px;
     }
-}
 
-h3 {
-    position: sticky;
-    top: 0px;
-    background-color: var(--background);
-    color: var(--primary);
-    font-size: 18pt;
-    height: 64px;
-    padding-left: 32px;
-    display: flex;
-    align-items: center;
+    & h3 {
+        background-color: var(--background);
+        position: sticky;
+        top: 0px;
+        font-size: 18pt;
+        width: 100%;
+        padding-left: 32px;
+        display: flex;
+        align-items: center;    
+    }
+
+    & h4 {
+        background-color: var(--background);
+        white-space: nowrap;
+        min-width: 128px;
+        height: 32px;
+        display: flex;
+        align-items: center;    
+        justify-content: end;
+        padding-right: 32px;
+    }
+
+    &.progress {
+        background-color: transparent;
+    }
 }
 
 nav { 
@@ -154,7 +170,7 @@ operator                { color: var(--operator) }
 
 @media (min-width:900px) {
     main { margin-right: 400px; }
-    h3 { display: none; }
+    .progress { display: none; }
     nav {
         width: 400px;
         height: 100vh;
@@ -164,7 +180,6 @@ operator                { color: var(--operator) }
         right: 0;
         overflow: scroll;
         padding: 64px;
-        /* background-color: blue; */
 
         & div {
             height: 100%;
@@ -172,16 +187,13 @@ operator                { color: var(--operator) }
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* background-color: aquamarine; */
         }
 
         & menu {
             line-height: 1.5;
             list-style-type: none;
-            /* padding-left: 0; */
             width: fit-content;
             font-size: 14pt;
-            /* background-color: red; */
         }
 
         & a        { color: var(--secondary); }
@@ -233,32 +245,14 @@ operator                { color: var(--operator) }
 }
 
 @media (max-width:900px) {
-    main {
-        & header {
-            /* background-color: var(--background);
-            background-color: transparent; */
-            /* position: sticky;
-            top: 0;
-            height: 75px; */
-            /* display: flex;
-            flex-direction: row;
-            justify-content: right;
-            align-items: center; */
-            & h1 {
-                /* background-color: var(--background);
-                width: fit-content; */
-            }
-        }
-    }
-
     @supports (height: 100vh) {	
-        body{	
+        body {	
             background: linear-gradient(to right top, var(--accent) 50%, var(--background) 50%);
-            background-size: 100% calc(100% - 100vh + 129px);
+            background-size: 100% calc(100% - 100vh + 329px);
             background-repeat: no-repeat;
         }
 
-        body:before{
+        body:before {
             content:'';
             position: fixed;
             top: 65px;
