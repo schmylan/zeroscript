@@ -262,7 +262,7 @@ operator                { color: var(--operator) }
             content:'';
             position: fixed;
             top: 65px;
-            bottom: 0;
+            /* bottom: 0; */ height: 200%;
             width: 100%;
             z-index: -1;
             background: var(--background);
