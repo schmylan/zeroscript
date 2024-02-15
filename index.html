@@ -550,26 +550,26 @@
 
       <!-- http/x -->
       <section id="httpx" class="code-sample httpx">
-        <code class="font4vw">
+        <code class="font3vw">
           <pre>
 <func>HTTP:</func>
 browser ------- GET -------> server
 browser <------ HTML ------- server
 
 <span class="accent">HTTP/X:</span>
-browser ----- DOM EVENT ---> server
-browser <--- DOM CHANGES --- server
+browser ----- DOM EVENT ---> server or wasm
+browser <--- DOM CHANGES --- server or wasm
 </pre>
         </code>
-        <p>
+        <p style="font-size: 12pt">
           HTTP/X represents a collection of HTTP-based protocols designed for
-          use cases where state and logic live on the server instead of the
-          client.
+          use cases where state and logic live on the server or in WASM instead
+          of in the browser via JavaScript.
           <br /><br />
 
           Instead of requesting HTML with a GET, HTTP/X forwards browser events
-          to server-side event handlers which respond with standardized
-          instructions for manipulating the DOM. <br /><br />
+          to server-side (or WASM) event handlers which respond with
+          standardized instructions for manipulating the DOM. <br /><br />
 
           Read more at
           <a href="https://httpx.org">httpx.org</a>.
@@ -589,16 +589,30 @@ browser <--- DOM CHANGES --- server
           </div>
         </code>
         <p>Now you know the ZeroScript syntax!</p>
-        <p>
-          Read the essay series that kicked off this project:
-          <a href="https://rylan.io/tag/zero/">rylan.io/tag/zero</a>
-        </p>
-        <p>
-          Read the full spec at:
-          <a href="https://github.com/schmylan/zeroscript"
-            >github.com/schmylan/zeroscript</a
-          >
-        </p>
+        <ul>
+          <li>
+            <p>
+              Full spec: <br />
+              <a href="https://github.com/schmylan/zeroscript"
+                >github.com/schmylan/zeroscript</a
+              >
+            </p>
+          </li>
+          <li>
+            <p>
+              Follow along: <br />
+              <a href="https://twitter.com/zeroscript_org">@zeroscript_org</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              The origin story: <br />
+              <a href="https://rylan.io/tag/zero/"
+                >Distilling the Web to Zero</a
+              >
+            </p>
+          </li>
+        </ul>
       </section>
 
       <!-- what's next -->
