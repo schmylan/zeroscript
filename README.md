@@ -647,7 +647,21 @@ There's nothing negative about using an API. It's just not necessary with the Ze
 
 ## State Management
 
-ZeroScript is intentionally non-prescriptive when it comes to state management beyond simply using hole-punch escape sequences `{{ }}` as the contact point into HTML. Each language should bring its unique strengths to the table whether it be signals, code generation or something else new and exciting.
+Use `<state>` for values that change.  `<state>` can be shared with and changed by other components.
+
+```xml
+<state score=0 />
+<MyButton count={{score}} />
+<h1>The score is {{score}}</h1>
+```
+
+When `<state>` is assigned to an attribute, any changes to the attribute's value also changes the `<state>`. Here, every keypress will update the `<h1>` tag.
+
+```xml
+<state name="World" />
+<input value={{name}} />
+<h1>Hello {{name}}!</h1>
+```
 
 <br />
 <br />
