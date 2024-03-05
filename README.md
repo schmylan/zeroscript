@@ -1,4 +1,4 @@
-# ZeroScript (Draft)
+# RFC: ZeroScript
 
 Build for the web using zero JavaScript.
 
