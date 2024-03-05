@@ -11,7 +11,7 @@ In many ways, ZeroScript is like Markdown. It's not an implementation but rather
 ZeroScript's purpose is grounded in the desire for the web to remain **THE** melting pot of human ideas and progress. The best way to prevent stagnation is to open the floodgates for other languages to compete.
 
 > [!IMPORTANT]
-> The examples in this README use a fictional language called `AnyScript` in order to provide concrete examples without any favoritism. Conceptually, any imperative language could be substituted.
+> The examples in this README use a fictional language called `Any++` in order to provide concrete examples without any favoritism. Conceptually, any imperative language could be substituted.
 
 ### Table of Contents
 
@@ -543,7 +543,7 @@ my-button.html
   Clicks: {{count}}
 </button>
 
-<script language="AnyScript">
+<script lang="any++">
   count = 0
 
   void handleClick(event) {
@@ -553,7 +553,7 @@ my-button.html
 ```
 
 > [!TIP]
-> Whatever value is specified in the `language` attribute is technically moot since it's never included in the HTML. Therefore, whatever value is specified is more for human consumption than for the machine.
+> Whatever value is specified in the `lang` attribute is technically moot since it's never included in the HTML. Therefore, whatever value is specified is more for human consumption than for the machine.
 
 ### Sibling Files
 
