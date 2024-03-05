@@ -676,7 +676,7 @@ In the same manner as [GitHub flavored Markdown](https://github.github.com/gfm/)
 
 Below is a running list of known guest languages and the various features they support.
 
-| Features                        |   Zero.cs   |
+| Features                        |   [xUI Tags](https://github.com/xui/xero)   |
 | ------------------------------- | :---------: |
 | Dynamic hosting                 |     ✅      |
 | SSG (static site generation)    | coming soon |
